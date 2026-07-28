@@ -13,7 +13,7 @@ body {
 /* Hero background com foto do El Barba */
 .hero-bg {
   background-color: #0A0A0A;
-  background-image: url('/barba-mob.png');
+  background-image: url('/barba-mob.webp');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

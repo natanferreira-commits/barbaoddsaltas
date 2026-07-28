@@ -1,6 +1,5 @@
 export default function Page() {
-  // TODO: trocar pelo link real do bot/grupo do Barba quando o Natan mandar
-  const grupoLink = "https://t.me/+PLACEHOLDER";
+  const grupoLink = "https://t.me/elbarba0bot?start=6a69232af4007eef9407b3b2";
 
   return (
     <main className="min-h-screen w-full flex flex-col hero-bg">
