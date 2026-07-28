@@ -1,29 +1,30 @@
 export default function Page() {
-  const grupoLink = "https://t.me/ovitorzzbot?start=6a6906fc22009374920f03a0";
+  // TODO: trocar pelo link real do bot/grupo do Barba quando o Natan mandar
+  const grupoLink = "https://t.me/+PLACEHOLDER";
 
   return (
     <main className="min-h-screen w-full flex flex-col hero-bg">
       <div className="flex-1 w-full flex flex-col hero-overlay">
-        {/* Conteúdo — empurrado pra baixo pra deixar o soldado aparecer */}
+        {/* Conteúdo — empurrado pra baixo pra deixar o Barba aparecer */}
         <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col items-center text-center px-6 pb-10 pt-[52vh] sm:pt-[48vh] md:pt-[42vh]">
           {/* Chip topo */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-neon/15 border border-brand-neon/50 text-brand-neon text-[10px] sm:text-[11px] font-bold uppercase tracking-widest mb-5">
             Grupo · Odds Altas
           </div>
 
-          {/* Headline — Inter Black, mais moderna e menos "template" */}
+          {/* Headline — Inter Black */}
           <h1 className="font-black leading-[0.95] tracking-tight mb-5">
             <span className="block text-3xl sm:text-4xl md:text-5xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Odds altas do
             </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl text-brand-neon drop-shadow-[0_2px_20px_rgba(192,255,0,0.5)]">
-              Vitor ZZ
+            <span className="block text-5xl sm:text-6xl md:text-7xl text-brand-neon drop-shadow-[0_2px_20px_rgba(255,106,0,0.5)]">
+              El Barba
             </span>
           </h1>
 
           {/* Sub */}
           <p className="text-white/90 text-base sm:text-lg md:text-xl font-medium max-w-lg leading-snug mb-7">
-            Bilhete de <span className="text-brand-neon font-bold">odd alta</span> todo dia, leitura afiada e comunidade selecionada.
+            Bilhete de <span className="text-brand-neon font-bold">odd alta</span> todo dia, leitura afiada e comunidade que vive bola.
           </p>
 
           {/* CTA */}
@@ -36,7 +37,6 @@ export default function Page() {
             <span>Quero entrar agora</span>
             <span className="group-hover:translate-x-1 transition">→</span>
           </a>
-
         </div>
 
         {/* Rodapé compliance */}

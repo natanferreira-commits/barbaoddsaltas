@@ -10,10 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Hero background com foto do ZZ soldado */
+/* Hero background com foto do El Barba */
 .hero-bg {
   background-color: #0A0A0A;
-  background-image: url('/rayo-mob.png');
+  background-image: url('/barba-mob.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -21,12 +21,12 @@ body {
 
 @media (min-width: 768px) {
   .hero-bg {
-    background-image: url('/rayo-desk.webp');
+    background-image: url('/barba-desk.webp');
     background-position: center center;
   }
 }
 
-/* Overlay: suave em cima (mostra o soldado), forte embaixo (destaca o texto) */
+/* Overlay: suave em cima (mostra o Barba), forte embaixo (destaca o texto) */
 .hero-overlay {
   background: linear-gradient(
     180deg,
@@ -38,13 +38,13 @@ body {
   );
 }
 
-/* CTA glow verde neon */
+/* CTA glow laranja */
 @keyframes pulseCta {
   0%, 100% {
-    box-shadow: 0 0 0 1px rgba(192, 255, 0, 0.5), 0 0 32px -8px rgba(192, 255, 0, 0.55);
+    box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.5), 0 0 32px -8px rgba(255, 106, 0, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 1px rgba(192, 255, 0, 0.8), 0 0 55px -6px rgba(192, 255, 0, 0.9);
+    box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.8), 0 0 55px -6px rgba(255, 106, 0, 0.9);
   }
 }
 

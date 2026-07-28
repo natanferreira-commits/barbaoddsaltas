@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vitor ZZ · Grupo de Odds Altas",
+  title: "El Barba · Grupo de Odds Altas",
   description:
-    "Entre no grupo de odds altas do Vitor ZZ. Bilhete de odd alta todo dia, análise pesada e comunidade selecionada.",
+    "Entre no grupo de odds altas do El Barba. Bilhete de odd alta todo dia, leitura afiada e comunidade que vive bola.",
   robots: { index: false, follow: false }
 };
 
