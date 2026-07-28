@@ -12,18 +12,18 @@ export default function Page() {
           </div>
 
           {/* Headline — Inter Black */}
-          <h1 className="font-black leading-[0.95] tracking-tight mb-5">
-            <span className="block text-3xl sm:text-4xl md:text-5xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              Cola no grupo de odds altas
+          <h1 className="font-black leading-[0.9] tracking-tight uppercase mb-5">
+            <span className="block text-5xl sm:text-6xl md:text-7xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              Acesso
             </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl text-brand-neon drop-shadow-[0_2px_20px_rgba(255,106,0,0.5)]">
-              mais raiz do país
+            <span className="block text-6xl sm:text-7xl md:text-8xl text-brand-neon drop-shadow-[0_2px_20px_rgba(255,106,0,0.5)]">
+              Liberado
             </span>
           </h1>
 
           {/* Sub */}
           <p className="text-white/90 text-base sm:text-lg md:text-xl font-medium max-w-lg leading-snug mb-7">
-            Bilhete de <span className="text-brand-neon font-bold">odd alta</span> todo dia, sem enrolação e com a galera que vive bola.
+            Entra no grupo de odds altas <span className="text-brand-neon font-bold">mais raiz do país</span>. Bilhete todo dia, sem enrolação.
           </p>
 
           {/* CTA */}
