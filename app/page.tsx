@@ -1,5 +1,5 @@
 export default function Page() {
-  const grupoLink = "https://t.me/elbarba0bot?start=6a69232af4007eef9407b3b2";
+  const grupoLink = "https://t.me/elbarba0bot?start=6a6a4fae0aa015d9100cb7cf";
 
   return (
     <main className="min-h-screen w-full flex flex-col hero-bg">
