@@ -1,5 +1,66 @@
+"use client";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const match = document.cookie.match(
+    new RegExp(`(^|;\\s*)(${name})=([^;]*)`)
+  );
+  return match ? decodeURIComponent(match[3]) : undefined;
+}
+
+function makeEventId(): string {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
 export default function Page() {
   const grupoLink = "https://t.me/elbarba0bot?start=6a6a4fae0aa015d9100cb7cf";
+
+  const handleLeadClick = () => {
+    const eventId = makeEventId();
+    const customData = {
+      content_name: "Grupo Odds Altas El Barba",
+      content_category: "Odds Altas"
+    };
+
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "Lead", customData, { eventID: eventId });
+    }
+
+    if (typeof window !== "undefined") {
+      const body = {
+        event_id: eventId,
+        event_name: "Lead",
+        event_source_url: window.location.href,
+        fbp: getCookie("_fbp"),
+        fbc: getCookie("_fbc"),
+        custom_data: customData
+      };
+
+      const blob = new Blob([JSON.stringify(body)], {
+        type: "application/json"
+      });
+
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon("/api/track", blob);
+      } else {
+        fetch("/api/track", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          keepalive: true
+        }).catch(() => {});
+      }
+    }
+  };
 
   return (
     <main className="min-h-screen w-full flex flex-col hero-bg">
@@ -31,6 +92,7 @@ export default function Page() {
             href={grupoLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleLeadClick}
             className="shine pulse-cta group w-full max-w-md inline-flex items-center justify-center gap-2 py-5 px-6 rounded-full bg-brand-neon text-black font-black text-lg sm:text-xl uppercase tracking-wide hover:brightness-110 active:scale-[0.98] transition"
           >
             <span>Quero entrar agora</span>
